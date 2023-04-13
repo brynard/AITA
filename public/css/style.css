@@ -1,4 +1,4 @@
-/* @import '~@fortawesome/fontawesome-free/css/all.min.css'; */
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
 
 
 * {
@@ -11,11 +11,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
 }
 
 header {
     margin: 0;
     padding: 0;
+    background-color: white;
 }
 
 .container {
@@ -24,10 +26,19 @@ header {
     text-align: center;
 }
 
-header {
-    background-color: white;
+.container-header-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
+
+.container-header-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
 
 header img {
     width: 100px;
@@ -62,6 +73,7 @@ header h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    width: 250px;
 }
 
 .item-card:hover {
@@ -85,7 +97,12 @@ header h2 {
 }
 
 .activities {
-    padding: 50px 0;
+
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 .activities h2 {
@@ -119,6 +136,7 @@ header h2 {
     /* adjust this value to your liking */
     margin: 0 auto;
     padding: 0 20px;
+    background-color: #f9f9f9;
 }
 
 nav {
@@ -207,7 +225,7 @@ nav a:hover {
 }
 
 .folder {
-    display: flex;
+
     align-items: center;
     cursor: pointer;
     margin-bottom: 10px;
@@ -231,6 +249,7 @@ nav a:hover {
 }
 
 .folder-content {
+    display: block;
     display: none;
     margin-left: 30px;
     margin-top: 10px;
@@ -279,6 +298,23 @@ nav a:hover {
     background-color: #f2f2f2;
 }
 
+.delete-folder {
+    border: none;
+    background: none;
+    margin-left: auto;
+    cursor: pointer;
+    
+}
+
+.delete-folder i {
+    color: black;
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.delete-folder:hover i {
+    color: blue;
+}
 
 
 .divider {
@@ -388,14 +424,14 @@ nav a:hover {
 .profile-dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .profile-name {
+}
+
+.profile-name {
     color: white;
     text-decoration: none;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     z-index: 1;
@@ -404,20 +440,19 @@ nav a:hover {
     min-width: 160px;
     background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     display: block;
     padding: 10px;
     color: #333;
     text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     background-color: #f1f1f1;
-  }
-  
-  .show {
+}
+
+.show {
     display: block;
-  }
-  
+}

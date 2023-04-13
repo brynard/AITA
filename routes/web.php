@@ -21,13 +21,13 @@ Route::get('/', function () {
 
 Route::get('/items', function () {
     return view('itemList');
-});
+})->name('itemList');
 
 
 
 Route::get('/dashboard', function () {
     return view('welcome');
-})->middleware(['auth', 'verified'])->name('welcome');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -35,13 +35,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/test-db-connection', function () {
-    try {
-        DB::connection()->getPdo();
-        echo "Successfully connected to the database!";
-    } catch (\Exception $e) {
-        die("Could not connect to the database. Error: " . $e->getMessage());
-    }
-});
+
 
 require __DIR__.'/auth.php';

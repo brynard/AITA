@@ -1,37 +1,36 @@
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8">
+
+    <script src="https://kit.fontawesome.com/fa624bee14.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    {{-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
-        integrity="sha384-3Wiw5zC39JZ5r5P5j6f5+qLtuX7y5p6U2V7yzeQ44RK0EWO1ZprJowUKMU0P+oLd" crossorigin="anonymous">
-    --}}
     <title>Research Management Centre</title>
- 
+    <style>
+
+    </style>
 </head>
 
 <body>
-   @include('header')
+    @include('header')
     <main>
-      
+
         <div class="wrapper">
             <section class="item-summary">
-                <div class="container">
+                <div class="container ">
                     <div class="item-card">
-                        <img src="item-logo.png" alt="Items Logo">
+                        <i class="fas fa-shopping-cart"></i>
                         <h3>7</h3>
                         <p>Items</p>
                     </div>
                     <div class="item-card">
-                        <img src="project-logo.png" alt="Projects Logo">
+                        <i class="fas fa-project-diagram"></i>
                         <h3>3</h3>
                         <p>Projects</p>
                     </div>
                     <div class="item-card">
-                        <img src="value-logo.png" alt="Total Values Logo">
+                        <i class="fas fa-sort-numeric-up"></i>
                         <h3>$500k</h3>
                         <p>Total Values</p>
                     </div>
